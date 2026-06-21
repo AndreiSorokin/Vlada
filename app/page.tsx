@@ -11,10 +11,8 @@ const sections = [
 ];
 
 const workItems = [
-  { title: 'Project 1', description: 'Visual concept for social campaign', href: '#' },
-  { title: 'Project 2', description: 'Landing page design with bold typography', href: '#' },
-  { title: 'Project 3', description: 'Brand visuals and social assets', href: '#' },
-  { title: 'Project 4', description: 'Editorial and presentation design', href: '#' },
+  { title: 'COMMERCIAL PROJECTS', image: '/img/commMain.png', href: '/work/commercial' },
+  { title: 'LEARNING PROJECTS', image: '/img/learnMain.jpg', href: '/work/learning' },
 ];
 
 export default function Home() {
@@ -134,29 +132,28 @@ export default function Home() {
         <ScrollReveal>
           <div className="work-grid">
             {workItems.map((item) => (
-              <a key={item.title} className="work-card" href={item.href}>
+              <Link key={item.title} className="work-card" href={item.href}>
                 <span className="work-title">{item.title}</span>
-                <span className="work-description">{item.description}</span>
-              </a>
+                <img className="work-image" src={item.image} alt={item.title} />
+              </Link>
             ))}
           </div>
         </ScrollReveal>
       </section>
 
-      <section className="section contact-section" id="contact">
-        <ScrollReveal>
-          <div className="contact-card">
-            <p className="section-label">LET'S TALK</p>
-            <h2>Interested in a project or collaboration?</h2>
-            <p>Send an email to <a href="mailto:hello@example.com">hello@example.com</a> or connect on Instagram.</p>
-            <div className="contact-links">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a>
-              <a href="https://wa.me" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
+      <footer className="site-footer" id="contact">
+        <div className="footer-inner">
+          <div className="footer-brand">
+            <div className="brand">Vlada Morozoova</div>
+            <p className="footer-tagline">Junior Digital Designer</p>
           </div>
-        </ScrollReveal>
-      </section>
+          <div className="footer-contact">
+            <p className="section-label">Get in touch</p>
+            <a className="footer-email" href="mailto:morozova.vlada2407@gmail.com">morozova.vlada2407@gmail.com</a>
+          </div>
+        </div>
+        <p className="footer-copyright">© {new Date().getFullYear()} Vlada Morozoova. All rights reserved.</p>
+      </footer>
     </main>
   );
 }
