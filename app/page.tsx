@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import ScrollReveal from './components/ScrollReveal';
 
 const sections = [
-  { id: 'about', title: 'About Me' },
+  { id: 'about', title: 'Design services' },
   { id: 'work', title: 'Work' },
   { id: 'contact', title: 'Contact' },
 ];
